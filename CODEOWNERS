@@ -1,0 +1,37 @@
+# CODEOWNERS
+# This file defines individuals or teams responsible for code in this repository.
+# More info: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything in the repo
+# Unless a later match takes precedence, @charg will be requested for review
+* @charg
+
+# API server code (FastAPI application)
+lyrics_api.py @charg
+fetch_lyrics.py @charg
+*.py @charg
+
+# Startup scripts
+start_lyrics_server.sh @charg
+start_lyrics_server.bat @charg
+start_ngrok.py @charg
+
+# Documentation
+*.md @charg
+
+# Configuration and dependencies
+requirements.txt @charg
+*.json @charg
+*.yml @charg
+*.yaml @charg
+
+# GitHub Actions workflows
+/.github/workflows/ @charg
+
+# Development and environment files
+.env* @charg
+.editorconfig @charg
+.gitattributes @charg
+
+# Lyrics cache directory
+/lyrics/ @charg

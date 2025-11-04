@@ -57,13 +57,13 @@ if errorlevel 1 (
 )
 
 echo [INFO] FastAPI サーバーを起動します（ポート8000）...
-start "Lyrics API Server" cmd /k "chcp 65001 >nul && venv\Scripts\activate.bat && uvicorn scripts.lyrics_api:app --reload --port 8000"
+start "Lyrics API Server" cmd /k "chcp 65001 >nul && venv\Scripts\activate.bat && uvicorn lyrics_api:app --reload --port 8000"
 
 REM サーバー起動待機
 timeout /t 3 /nobreak >nul
 
 echo [INFO] ngrok でポート8000を公開します...
-start "ngrok" cmd /k "chcp 65001 >nul && venv\Scripts\activate.bat && python scripts\start_ngrok.py"
+start "ngrok" cmd /k "chcp 65001 >nul && venv\Scripts\activate.bat && python start_ngrok.py"
 
 echo.
 echo ===================================
